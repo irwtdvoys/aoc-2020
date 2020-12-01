@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "307b2a4405818cd0af3c7c2bd96e7529",
+    "content-hash": "782ddc13da84ac361a457e0116b9c364",
     "packages": [
         {
             "name": "cruxoft/aoc-helper",
@@ -87,6 +87,55 @@
                 "source": "https://github.com/irwtdvoys/bolt-core/tree/0.9.1"
             },
             "time": "2020-01-23T11:35:48+00:00"
+        },
+        {
+            "name": "cruxoft/bolt-json",
+            "version": "0.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/irwtdvoys/bolt-json.git",
+                "reference": "61160abbd2871d45e2e2d9965d79d873340f31aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-json/zipball/61160abbd2871d45e2e2d9965d79d873340f31aa",
+                "reference": "61160abbd2871d45e2e2d9965d79d873340f31aa",
+                "shasum": ""
+            },
+            "require": {
+                "cruxoft/bolt-core": "^0.9.0",
+                "ext-json": "*",
+                "php": "^7"
+            },
+            "require-dev": {
+                "cruxoft/dump": "^0.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Adams",
+                    "role": "Developer"
+                }
+            ],
+            "description": "JSON wrapper library built on the Bolt Framework",
+            "keywords": [
+                "bolt",
+                "json"
+            ],
+            "support": {
+                "issues": "https://github.com/irwtdvoys/bolt-json/issues",
+                "source": "https://github.com/irwtdvoys/bolt-json/tree/master"
+            },
+            "time": "2020-01-29T16:03:57+00:00"
         },
         {
             "name": "cruxoft/logbook",
@@ -326,7 +375,9 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-json": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
 }

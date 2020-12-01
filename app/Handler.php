@@ -1,8 +1,11 @@
 <?php
+	declare(strict_types=1);
+
 	namespace App;
 
 	use Bolt\Exception;
 	use Bolt\Exceptions\Error;
+	use Bolt\Json;
 	use Cruxoft\Logbook;
 
 	class Handler
@@ -36,7 +39,7 @@
 
 			unset($data['trace']);
 
-			echo(json_encode($data, JSON_PRETTY_PRINT) . PHP_EOL);
+			echo(Json::encode($data, JSON_PRETTY_PRINT) . PHP_EOL);
 
 			return true;
 		}

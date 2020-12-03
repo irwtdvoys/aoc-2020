@@ -19,14 +19,17 @@
 		{
 			$result = new Result(0, 0);
 
-			$result->part1 = $this->find(2020);
-
 			$count = count($this->data);
 
 			for ($loop1 = 0; $loop1 < $count - 1; $loop1++)
 			{
 				for ($loop2 = $loop1 + 1; $loop2 < $count; $loop2++)
 				{
+					if ($this->data[$loop1] + $this->data[$loop2] === 2020)
+					{
+						$result->part1 = $this->data[$loop1] * $this->data[$loop2];
+					}
+
 					if ($loop2 !== $count - 1)
 					{
 						for ($loop3 = $loop2 + 1; $loop3 < $count; $loop3++)

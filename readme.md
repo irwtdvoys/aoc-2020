@@ -15,3 +15,7 @@ Over engineered part 1 so part two just needed a tweaked validation method. The 
 ##### Day 03
 
 Was expecting more from part 2, in the end the way I had writen part 1 made it trivial by using `array_product`.
+
+##### Day 04
+
+No issues today. Validation rules were a nice test of my simple regex knowledge.

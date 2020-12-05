@@ -19,3 +19,7 @@ Was expecting more from part 2, in the end the way I had writen part 1 made it t
 ##### Day 04
 
 No issues today. Validation rules were a nice test of my simple regex knowledge.
+
+##### Day 05
+
+Easier than expected for the first weekend puzzle. Understood the binary nature of the input strings so there wasn't a lot to do for part one. Part two I chose to do by calculation rather than searching through the result list.

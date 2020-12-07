@@ -27,3 +27,7 @@ Easier than expected for the first weekend puzzle. Understood the binary nature 
 ##### Day 06
 
 Didn't have a lot of time so there's probably a more efficient way of merging the group data but not much to it today.
+
+##### Day 07
+
+Solved with some recursion and built the data structure from references keeping the data structure minimal while allowing full traversal.

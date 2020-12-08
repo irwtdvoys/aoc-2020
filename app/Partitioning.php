@@ -21,7 +21,7 @@
 		{
 			$binary = str_replace(["F", "B", "L", "R"], [0, 1, 0, 1], $data);
 
-			return intval($binary, 2);
+			return bindec($binary);
 		}
 
 		public function run(): Result

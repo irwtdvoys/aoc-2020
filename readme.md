@@ -31,3 +31,7 @@ Didn't have a lot of time so there's probably a more efficient way of merging th
 ##### Day 07
 
 Solved with some recursion and built the data structure from references keeping the data structure minimal while allowing full traversal.
+
+##### Day 08
+
+Might have overengineered the VM as I'm hoping it'll be used again like the intcode VM from 2020.

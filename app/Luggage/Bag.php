@@ -31,7 +31,6 @@
 			{
 				foreach ($this->children as $child)
 				{
-					echo($child['bag']->name . " x" . $child['quantity'] . PHP_EOL);
 					$count += $child['quantity'] * $child['bag']->count();
 				}
 			}

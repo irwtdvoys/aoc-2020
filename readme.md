@@ -35,3 +35,7 @@ Solved with some recursion and built the data structure from references keeping 
 ##### Day 08
 
 Might have overengineered the VM as I'm hoping it'll be used again like the intcode VM from 2020.
+
+##### Day 09
+
+Fairly basic day, nothing crazy just implemented the algorithm with a few loops.

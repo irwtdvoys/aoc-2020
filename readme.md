@@ -39,3 +39,7 @@ Might have overengineered the VM as I'm hoping it'll be used again like the intc
 ##### Day 09
 
 Fairly basic day, nothing crazy just implemented the algorithm with a few loops.
+
+##### Day 10
+
+Spent far too long trying to optimise the recursion for part 2 instead of fining a simpler solution.

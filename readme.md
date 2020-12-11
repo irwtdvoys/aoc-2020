@@ -43,3 +43,7 @@ Fairly basic day, nothing crazy just implemented the algorithm with a few loops.
 ##### Day 10
 
 Spent far too long trying to optimise the recursion for part 2 instead of fining a simpler solution.
+
+##### Day 11
+
+Didn't write a good solution for part 1 so the checking system for part 2 didn't use much reused code.

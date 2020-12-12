@@ -47,3 +47,7 @@ Spent far too long trying to optimise the recursion for part 2 instead of fining
 ##### Day 11
 
 Didn't write a good solution for part 1 so the checking system for part 2 didn't use much reused code.
+
+##### Day 12
+
+Remembered a nice simple ray to rotate around the origin in 90 degree steps without having to fall back on trigonometry which was nice!

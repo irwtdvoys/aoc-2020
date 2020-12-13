@@ -51,3 +51,7 @@ Didn't write a good solution for part 1 so the checking system for part 2 didn't
 ##### Day 12
 
 Remembered a nice simple ray to rotate around the origin in 90 degree steps without having to fall back on trigonometry which was nice!
+
+##### Day 13
+
+The number theory wasn't something I've ever come across before so was a bit out of my depth. Was able to convert some Rosettacode examples to PHP to complete part 2.

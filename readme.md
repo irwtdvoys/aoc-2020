@@ -55,3 +55,7 @@ Remembered a nice simple ray to rotate around the origin in 90 degree steps with
 ##### Day 13
 
 The number theory wasn't something I've ever come across before so was a bit out of my depth. Was able to convert some Rosettacode examples to PHP to complete part 2.
+
+##### Day 14
+
+Had a pretty optimal solution for part 1 and was hopeful for part 2, was still hitting oom errors so gave it a rethink to avoid saving the last two occurances of each number.

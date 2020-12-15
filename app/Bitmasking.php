@@ -3,46 +3,7 @@
 
 	use AoC\Helper;
 	use AoC\Result;
-	use App\Ferry\Ship;
-	use App\Ferry\Turtle;
-	use App\Ferry\Waypoint;
-	use App\Utils\CompassDirections as Directions;
-	use Bolt\Maths;
-
-	class Instruction
-	{
-		public int $location;
-		public int $value;
-
-		public function __construct(string $data)
-		{
-			preg_match("/mem\[(\d+)] = (\d+)/", $data, $matches);
-
-			$this->location = $matches[1];
-			$this->value = $matches[2];
-		}
-	}
-
-	class Program
-	{
-		public string $mask;
-		public array $instructions = [];
-
-		public function __construct($data)
-		{
-			$lines = explode(PHP_EOL, $data);
-
-			$this->mask = substr(array_shift($lines), 7);
-
-			$this->instructions = array_map(
-				function($element)
-				{
-					return new Instruction($element);
-				},
-				$lines
-			);
-		}
-	}
+	use App\Bitmasking\Program;
 
 	class Bitmasking extends Helper
 	{

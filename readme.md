@@ -58,4 +58,8 @@ The number theory wasn't something I've ever come across before so was a bit out
 
 ##### Day 14
 
+Found a way to generate all masks for part 2 with iteration instead of recursion which worked out pretty well.
+
+##### Day 15
+
 Had a pretty optimal solution for part 1 and was hopeful for part 2, was still hitting oom errors so gave it a rethink to avoid saving the last two occurances of each number.

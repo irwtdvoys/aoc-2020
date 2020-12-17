@@ -63,3 +63,7 @@ Found a way to generate all masks for part 2 with iteration instead of recursion
 ##### Day 15
 
 Had a pretty optimal solution for part 1 and was hopeful for part 2, was still hitting oom errors so gave it a rethink to avoid saving the last two occurances of each number.
+
+##### Day 17
+
+A bit hacky, was running short on time. Nice unexpected addition for part 2 but was simple enough to add another dimension to my data structure.

@@ -67,3 +67,7 @@ Had a pretty optimal solution for part 1 and was hopeful for part 2, was still h
 ##### Day 17
 
 A bit hacky, was running short on time. Nice unexpected addition for part 2 but was simple enough to add another dimension to my data structure.
+
+##### Day 18
+
+Nice and easy today, optimised with recursion for the parentheses, the rest was handles by loops. Made use of basic array and string manipulations in different areas.

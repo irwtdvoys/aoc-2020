@@ -66,17 +66,14 @@
 
 			if ($this->override === true)
 			{
-				if ($index === 8)
+				switch ($index)
 				{
-					$result = "($result)+";
-				}
-
-				if ($index === 11)
-				{
-					$a = $this->generatePattern(42);
-					$b = $this->generatePattern(31);
-
-					$result = "($a$b|$a{2}$b{2}|$a{3}$b{3}|$a{4}$b{4}|$a{5}$b{5})";
+					case 8:
+						$result = "($result)+";
+						break;
+					case 11:
+						$result = "(?P<group>" . $this->generatePattern(42) . "(?&group)?" . $this->generatePattern(31) . ")";
+						break;
 				}
 			}
 
@@ -104,6 +101,7 @@
 
 			$this->reset();
 			$this->override = true;
+			dump("/^" . $this->generatePattern(0) . "$/m");
 			$result->part2 = preg_match_all("/^" . $this->generatePattern(0) . "$/m", $this->messages);
 
 			return $result;

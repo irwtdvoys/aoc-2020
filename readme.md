@@ -71,3 +71,7 @@ A bit hacky, was running short on time. Nice unexpected addition for part 2 but 
 ##### Day 18
 
 Nice and easy today, optimised with recursion for the parentheses, the rest was handles by loops. Made use of basic array and string manipulations in different areas.
+
+##### Day 19
+
+Fun with regex, used recursion to generate the main regex but for part 2 had to find ways to break out of it correctly. Also had to optimise the regex a bit in part 2 as I was hitting the upper limit that PHP could handle.

@@ -8,6 +8,6 @@
 	$helper = new CrabCombat(22);//, ROOT . "data/22/example");
 	$helper->run()->output();
 
-	// Part 1: 213
-	// Part 2: 325
+	// Part 1: 31455
+	// Part 2: 32528
 ?>

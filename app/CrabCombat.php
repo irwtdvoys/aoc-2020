@@ -15,7 +15,9 @@
 		{
 			parent::__construct($day);
 
-			$decks = explode(str_repeat(PHP_EOL, 2), parent::load($override));
+			$raw = parent::load($override);
+
+			$decks = explode(str_repeat(PHP_EOL, 2), $raw);
 
 			foreach ($decks as $deck)
 			{
@@ -28,9 +30,13 @@
 		{
 			$result = new Result(0, 0);
 
-			$game = new Combat($this->decks[1], $this->decks[2]);
+			$game = new Combat(clone $this->decks[1], clone $this->decks[2]);
 			$game->play();
 			$result->part1 = $game->winningScore();
+
+			$game = new RecursiveCombat(clone $this->decks[1], clone $this->decks[2]);
+			$game->play();
+			$result->part2 = $game->winningScore();
 
 			return $result;
 		}

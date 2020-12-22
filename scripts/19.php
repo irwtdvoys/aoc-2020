@@ -1,5 +1,4 @@
 <?php
-	ini_set("memory_limit", "8G");
 	define("ROOT", __DIR__ . "/../");
 
 	require_once(ROOT . "bin/init.php");

@@ -5,7 +5,7 @@
 
 	use App\Luggage;
 
-	$helper = new Luggage(7, ROOT . "data/07/example");
+	$helper = new Luggage(7);//, ROOT . "data/07/example");
 	$helper->run()->output();
 
 	// Part 1: 208

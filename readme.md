@@ -75,3 +75,7 @@ Nice and easy today, optimised with recursion for the parentheses, the rest was 
 ##### Day 19
 
 Fun with regex, used recursion to generate the main regex but for part 2 had to find ways to break out of it correctly. Also had to optimise the regex a bit in part 2 as I was hitting the upper limit that PHP could handle.
+
+##### Day 22
+
+Fun task, the classes created for part one were easy to use and extend for the recursive version in part 2.

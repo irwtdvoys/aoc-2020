@@ -69,7 +69,7 @@
 
 			foreach ($tree as $nodeName => $children)
 			{
-				if (count($children) > 0)
+				if (is_array($children) && count($children) > 0)
 				{
 					foreach ($children as $childName => $child)
 					{

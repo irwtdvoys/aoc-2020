@@ -79,3 +79,7 @@ Fun with regex, used recursion to generate the main regex but for part 2 had to 
 ##### Day 22
 
 Fun task, the classes created for part one were easy to use and extend for the recursive version in part 2.
+
+##### Day 23
+
+Used a circular linked list for part 1 so only needed to add an index to make it so part 2 would finish before the heat death of the universe.

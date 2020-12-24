@@ -83,3 +83,7 @@ Fun task, the classes created for part one were easy to use and extend for the r
 ##### Day 23
 
 Used a circular linked list for part 1 so only needed to add an index to make it so part 2 would finish before the heat death of the universe.
+
+##### Day 24
+
+I've always wanted to play with hex grids so had done a lot of research on appropriate data structures in the past. Was able to use 3D positions with additional valid location checks, after that pretty straight forward.

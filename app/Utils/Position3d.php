@@ -18,5 +18,10 @@
 		{
 			return abs($this->x) + abs($this->y) + abs($this->z);
 		}
+
+		public function __toString()
+		{
+			return $this->x . "," . $this->y . "," . $this->z;
+		}
 	}
 ?>

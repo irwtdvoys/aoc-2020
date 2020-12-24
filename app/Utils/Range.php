@@ -11,5 +11,11 @@
 			$this->min = $min;
 			$this->max = $max;
 		}
+
+		public function add(int $value): void
+		{
+			$this->min = min($this->min, $value);
+			$this->max = max($this->max, $value);
+		}
 	}
 ?>

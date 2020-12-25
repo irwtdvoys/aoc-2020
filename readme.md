@@ -87,3 +87,7 @@ Used a circular linked list for part 1 so only needed to add an index to make it
 ##### Day 24
 
 I've always wanted to play with hex grids so had done a lot of research on appropriate data structures in the past. Was able to use 3D positions with additional valid location checks, after that pretty straight forward.
+
+##### Day 25
+
+Nice simple one for Christmas day =)

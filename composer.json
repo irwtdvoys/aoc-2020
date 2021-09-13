@@ -15,7 +15,7 @@
 		"ext-curl": "*"
 	},
 	"require-dev": {
-		"cruxoft/dump": "^0.2.2"
+		"cruxoft/dump": "^0.3.0"
 	},
 	"authors": [
 		{

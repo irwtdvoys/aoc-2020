@@ -2,7 +2,7 @@
 	ini_set("memory_limit", "256M");
 	const ROOT = __DIR__ . "/../";
 
-	require_once(CRUXOFT_ROOT . "bin/init.php");
+	require_once(ROOT . "bin/init.php");
 
 	use App\LobbyLayout;
 

@@ -1,25 +1,18 @@
 <?php
 	namespace App\Utils;
 
-	class Position3d
+	class Position3d extends Position2d
 	{
-		public int $x = 0;
-		public int $y = 0;
 		public int $z = 0;
 
 		public function __construct(int $x = 0, int $y = 0, int $z = 0)
 		{
-			$this->x = $x;
-			$this->y = $y;
+			parent::__construct($x, $y);
+
 			$this->z = $z;
 		}
 
-		public function energy()
-		{
-			return abs($this->x) + abs($this->y) + abs($this->z);
-		}
-
-		public function __toString()
+		public function __toString(): string
 		{
 			return $this->x . "," . $this->y . "," . $this->z;
 		}

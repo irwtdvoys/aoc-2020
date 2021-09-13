@@ -7,7 +7,7 @@
 
 	$day = 20;
 
-	$helper = new JurassicJigsaw($day, CRUXOFT_ROOT . "data/" . $day . "/example");
+	$helper = new JurassicJigsaw($day, ROOT . "data/" . $day . "/example");
 	$helper->run()->output();
 
 	// Part 1:

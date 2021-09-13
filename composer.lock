@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93c3862336cf15fc58403c1772d80b84",
+    "content-hash": "d6f8a9782f71578ad0bd894456dcf020",
     "packages": [
         {
             "name": "cruxoft/aoc-helper",
@@ -326,16 +326,16 @@
     "packages-dev": [
         {
             "name": "cruxoft/dump",
-            "version": "0.2.2",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/dump.git",
-                "reference": "0010b53abb5fa90eadffe59a23af3b90649e4a13"
+                "reference": "87b9a8bbef08ff99a86629fc157e85c943c85f40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/dump/zipball/0010b53abb5fa90eadffe59a23af3b90649e4a13",
-                "reference": "0010b53abb5fa90eadffe59a23af3b90649e4a13",
+                "url": "https://api.github.com/repos/irwtdvoys/dump/zipball/87b9a8bbef08ff99a86629fc157e85c943c85f40",
+                "reference": "87b9a8bbef08ff99a86629fc157e85c943c85f40",
                 "shasum": ""
             },
             "require-dev": {
@@ -363,9 +363,9 @@
             "description": "A system for generating structure information about nested variables for use including screen display",
             "support": {
                 "issues": "https://github.com/irwtdvoys/dump/issues",
-                "source": "https://github.com/irwtdvoys/dump/tree/master"
+                "source": "https://github.com/irwtdvoys/dump/tree/0.3.0"
             },
-            "time": "2018-03-14T14:14:53+00:00"
+            "time": "2021-08-26T16:04:16+00:00"
         }
     ],
     "aliases": [],
@@ -380,5 +380,5 @@
         "ext-curl": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }

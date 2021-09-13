@@ -10,7 +10,7 @@
 
 	class Handler
 	{
-		public static function error($level, $message, $file, $line, $context)
+		public static function error($level, $message, $file, $line)
 		{
 			throw new Error($message, 0, $level, $file, $line);
 		}

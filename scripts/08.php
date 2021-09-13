@@ -1,7 +1,7 @@
 <?php
-	define("ROOT", __DIR__ . "/../");
+	const ROOT = __DIR__ . "/../";
 
-	require_once(ROOT . "bin/init.php");
+	require_once(CRUXOFT_ROOT . "bin/init.php");
 
 	use App\Handheld;
 

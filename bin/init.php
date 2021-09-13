@@ -1,9 +1,12 @@
 <?php
 	use App\Handler;
 	use App\Loggers;
+	use Cruxoft\Dump\Options;
 	use Cruxoft\Logbook;
 	use Monolog\Handler\StreamHandler;
 	use Monolog\Logger;
+
+	const CRUXOFT_ROOT = ROOT;
 
 	if (PHP_SAPI !== "cli")
 	{
@@ -17,8 +20,5 @@
 	
 	Logbook::add(Loggers::GENERAL, array(new StreamHandler(ROOT . "logs/main.log", Logger::INFO)));
 
-	function dump($object)
-	{
-		Cruxoft\dump($object);
-	}
+	#putenv("CRUXOFT_DUMP_DEFAULT=" . (Options::ALL & ~Options::DIE_AFTER));
 ?>

@@ -166,28 +166,28 @@
 		}
 
 		// Iterator
-		public function current()
+		public function current(): ?Node
 		{
 			return $this->current;
 		}
 
-		public function key()
+		public function key(): int
 		{
 			return $this->index;
 		}
 
-		public function valid()
+		public function valid(): bool
 		{
-			return ($this->index < $this->count) ? true : false;
+			return $this->index < $this->count;
 		}
 
-		public function rewind()
+		public function rewind(): void
 		{
 			$this->reset();
 		}
 
 		// Countable
-		public function count()
+		public function count(): int
 		{
 			return $this->count;
 		}

@@ -165,7 +165,7 @@
 
 							$count = $this->neighbours($current);
 
-							$currentValue = isset($this->tiles[(string)$current]) ? $this->tiles[(string)$current] : self::TILE_WHITE;
+							$currentValue = $this->tiles[(string)$current] ?? self::TILE_WHITE;
 
 							switch ($currentValue)
 							{

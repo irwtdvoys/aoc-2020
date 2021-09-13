@@ -1,6 +1,6 @@
 <?php
 	ini_set("memory_limit", "256M");
-	define("ROOT", __DIR__ . "/../");
+	const ROOT = __DIR__ . "/../";
 
 	require_once(ROOT . "bin/init.php");
 

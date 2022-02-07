@@ -5,6 +5,7 @@
 	class Rule
 	{
 		public string $label;
+		/** @var Range[] */
 		public array $ranges = [];
 
 		public function __construct(string $data)
@@ -27,6 +28,19 @@
 			}
 
 			return false;
+		}
+
+		public function validateGroup(array $group): bool
+		{
+			foreach ($group as $item)
+			{
+				if (!$this->isValid($item))
+				{
+					return false;
+				}
+			}
+
+			return true;
 		}
 	}
 ?>

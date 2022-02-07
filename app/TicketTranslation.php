@@ -39,7 +39,7 @@
 
 		public function run(): Result
 		{
-			$result = new Result(0, 0);
+			$result = new Result(0, 1);
 
 			$invalid = [];
 
@@ -77,9 +77,73 @@
 
 			$result->part1 = array_sum($invalid);
 
-			dump($tickets);
+			$matching = [];
+
+			foreach ($this->rules as $rule)
+			{
+				$matching[$rule->label] = null;
+			}
 
 
+			$matched = [];
+
+			// Group values across tickets
+			$groups = [];
+
+			foreach ($tickets as $ticket)
+			{
+				foreach ($ticket as $key => $value)
+				{
+					$groups[$key][] = $value;
+				}
+			}
+
+			// Build list of valid codes
+			$tmp = [];
+
+			foreach ($this->rules as $rule)
+			{
+				foreach ($groups as $index => $group)
+				{
+					if ($rule->validateGroup($group))
+					{
+						$tmp[$rule->label][] = $index;
+					}
+				}
+			}
+
+			// Repeatedly filter found items and store in matching
+			while (count($matched) !== count($matching))
+			{
+				foreach ($tmp as $key => $value)
+				{
+					$tmp[$key] = array_values(
+						array_filter(
+							$value,
+							function ($element) use ($matched)
+							{
+								return !in_array($element, $matched);
+							}
+						)
+					);
+
+					if (count($value) === 1)
+					{
+						$matching[$key] = $value[0];
+						$matched[] = $value[0];
+						unset($tmp[$key]);
+					}
+				}
+			}
+
+			// Calculate part 2
+			foreach ($matching as $key => $index)
+			{
+				if (str_starts_with($key, "departure"))
+				{
+					$result->part2 *= $tickets[0][$index];
+				}
+			}
 
 			return $result;
 		}

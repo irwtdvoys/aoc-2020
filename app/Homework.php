@@ -12,9 +12,9 @@
 		public array $data = [];
 		public object $range;
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$this->data = explode(PHP_EOL, parent::load($override));
 		}
@@ -86,18 +86,12 @@
 
 		private function calculate(int $a, string $operation, int $b): int
 		{
-			switch ($operation)
+			$result = match ($operation)
 			{
-				case self::ADDITION:
-					$result = $a + $b;
-					break;
-				case self::MULTIPLICATION:
-					$result = $a * $b;
-					break;
-				default:
-					$result = 0;
-					break;
-			}
+				self::ADDITION => $a + $b,
+				self::MULTIPLICATION => $a * $b,
+				default => 0,
+			};
 
 			return $result;
 		}

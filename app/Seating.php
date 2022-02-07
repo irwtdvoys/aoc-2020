@@ -13,9 +13,9 @@
 
 		public array $data = [];
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$this->data = array_map(
 				function($element)
@@ -26,7 +26,7 @@
 			);
 		}
 
-		public function draw()
+		public function draw(): void
 		{
 			foreach ($this->data as $row)
 			{
@@ -210,7 +210,11 @@
 			while ($changes !== 0)
 			{
 				$changes = $this->step();
-				$this->draw();
+
+				if ($this->verbose)
+				{
+					$this->draw();
+				}
 			}
 
 			$result->part1 = $this->count();
@@ -222,7 +226,11 @@
 			while ($changes !== 0)
 			{
 				$changes = $this->step(2);
-				$this->draw();
+
+				if ($this->verbose)
+				{
+					$this->draw();
+				}
 			}
 
 			$result->part2 = $this->count();

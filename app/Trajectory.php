@@ -4,7 +4,7 @@
 	use AoC\Helper;
 	use AoC\Result;
 	use App\PasswordPolicy\Password;
-	use App\Utils\Position2d;
+	use AoC\Utils\Position2d;
 
 	class Trajectory extends Helper
 	{
@@ -13,9 +13,9 @@
 		public int $width;
 		public int $height;
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$this->map = array_map(
 				function($element)
@@ -30,7 +30,7 @@
 			$this->reset();
 		}
 
-		public function output()
+		public function output(): void
 		{
 			foreach ($this->map as $row)
 			{
@@ -40,12 +40,12 @@
 			echo(PHP_EOL);
 		}
 
-		public function reset()
+		public function reset(): void
 		{
 			$this->position = new Position2d();
 		}
 
-		public function move(int $right, int $down)
+		public function move(int $right, int $down): void
 		{
 			$this->position->y += $down;
 			$this->position->x += $right;
@@ -56,7 +56,7 @@
 			}
 		}
 
-		public function process(int $right, int $down)
+		public function process(int $right, int $down): int
 		{
 			$this->reset();
 			$count = 0;

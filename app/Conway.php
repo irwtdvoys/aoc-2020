@@ -4,17 +4,17 @@
 	use AoC\Helper;
 	use AoC\Result;
 	use App\Conway\Tiles;
-	use App\Utils\Position4d;
-	use App\Utils\Range;
+	use AoC\Utils\Position4d;
+	use AoC\Utils\Range;
 
 	class Conway extends Helper
 	{
 		public array $data = [];
 		public object $range;
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$raw = parent::load($override);
 
@@ -35,7 +35,7 @@
 
 		public function getState(Position4d $position): string
 		{
-			return isset($this->data[(string)$position]) ? $this->data[(string)$position] : Tiles::INACTIVE;
+			return $this->data[(string)$position] ?? Tiles::INACTIVE;
 		}
 
 		public function countNeighbors(Position4d $position): int

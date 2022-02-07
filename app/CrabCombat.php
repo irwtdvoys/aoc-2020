@@ -9,11 +9,12 @@
 
 	class CrabCombat extends Helper
 	{
+		/** @var Deck[] */
 		public array $decks = [];
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$raw = parent::load($override);
 

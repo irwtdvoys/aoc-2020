@@ -10,14 +10,14 @@
 	{
 		public array $data;
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$this->data = explode(PHP_EOL, parent::load($override));
 		}
 
-		private function process($data)
+		private function process($data): int
 		{
 			$binary = str_replace(["F", "B", "L", "R"], [0, 1, 0, 1], $data);
 

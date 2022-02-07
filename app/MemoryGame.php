@@ -10,9 +10,9 @@
 		public int $last;
 		public array $history;
 
-		public function __construct(int $day)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$this->last = array_pop($this->input);
 			$this->history = array_combine($this->input, range(1, count($this->input)));

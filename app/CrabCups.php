@@ -6,9 +6,9 @@
 	use App\CrabCombat\Combat;
 	use App\CrabCombat\Deck;
 	use App\CrabCombat\RecursiveCombat;
-	use App\Utils\CircularLinkedList;
-	use App\Utils\LinkedList;
-	use App\Utils\Range;
+	use AoC\Utils\CircularLinkedList;
+	use AoC\Utils\LinkedList;
+	use AoC\Utils\Range;
 
 	class CrabCups extends Helper
 	{
@@ -20,9 +20,9 @@
 
 		public ?string $override = null;
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$this->override = $override;
 		}

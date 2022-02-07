@@ -4,8 +4,8 @@
 	use AoC\Helper;
 	use AoC\Result;
 	use App\LobbyLayout\Instruction;
-	use App\Utils\Position3d;
-	use App\Utils\Range;
+	use AoC\Utils\Position3d;
+	use AoC\Utils\Range;
 
 	class LobbyLayout extends Helper
 	{
@@ -19,13 +19,14 @@
 		const TILE_WHITE = false;
 		const TILE_BLACK = true;
 
+		/** @var Instruction[] */
 		public array $instructions = [];
 		public Position3d $position;
 		public array $tiles = [];
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$this->instructions = array_map(
 				function ($element)
@@ -69,7 +70,7 @@
 			}
 		}
 
-		public function count()
+		public function count(): int
 		{
 			return count(array_filter($this->tiles));
 		}

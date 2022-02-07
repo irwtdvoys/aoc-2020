@@ -3,6 +3,7 @@
 
 	class Combat
 	{
+		/** @var Deck[] */
 		public array $decks = [];
 		public ?int $winner;
 

@@ -1,0 +1,84 @@
+#!/usr/bin/env php
+<?php
+	use App\AllergenAssessment;
+	use App\Bitmasking;
+	use App\Conway;
+	use App\CrabCombat;
+	use App\CrabCups;
+	use App\Customs;
+	use App\Encoding;
+	use App\Ferry;
+	use App\Handheld;
+	use App\Homework;
+	use App\Joltage;
+	use App\JurassicJigsaw;
+	use App\LobbyLayout;
+	use App\Luggage;
+	use App\MemoryGame;
+	use App\Messages;
+	use App\Partitioning;
+	use App\PassportProcessing;
+	use App\PasswordPolicy;
+	use App\Report;
+	use App\Rfid;
+	use App\Seating;
+	use App\Timetable;
+	use App\Trajectory;
+
+	ini_set("memory_limit", "256M");
+
+	const ROOT = __DIR__ . "/../";
+
+	require_once(ROOT . "bin/init.php");
+
+	// ./bin/run --day 1 --override example --verbose
+	// ./bin/run -d=1 -o=example -v
+
+	$helpers = [
+		1 => Report::class,
+		2 => PasswordPolicy::class,
+		3 => Trajectory::class,
+		4 => PassportProcessing::class,
+		5 => Partitioning::class,
+		6 => Customs::class,
+		7 => Luggage::class,
+		8 => Handheld::class,
+		9 => Encoding::class,
+		10 => Joltage::class, // Issue in part 2
+		11 => Seating::class,
+		12 => Ferry::class,
+		13 => Timetable::class,
+		14 => Bitmasking::class,
+		15 => MemoryGame::class,
+		#16 => NYI::class,
+		17 => Conway::class,
+		18 => Homework::class,
+		19 => Messages::class,
+		20 => JurassicJigsaw::class,
+		21 => AllergenAssessment::class,
+		22 => CrabCombat::class,
+		23 => CrabCups::class,
+		24 => LobbyLayout::class,
+		25 => Rfid::class,
+	];
+
+	$options = getopt("d:o:v", ["day:", "override:", "verbose"]);
+
+	$day = (int)($options['day'] ?? $options['d'] ?? null);
+	$override = $options['override'] ?? $options['o'] ?? null;
+	$verbose = isset($options['verbose']) || isset($options['v']);
+
+	if (!isset($helpers[$day]))
+	{
+		throw new Exception("Day " . $day . " missing from config");
+	}
+
+	(new $helpers[$day](
+		$day,
+		$verbose,
+		isset($override) ? ROOT . "data/" . str_pad($day, 2, "0", STR_PAD_LEFT) . "/" . $override : null
+	))
+		->run()
+		->output()
+	;
+?>

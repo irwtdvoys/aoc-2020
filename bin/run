@@ -22,6 +22,7 @@
 	use App\Report;
 	use App\Rfid;
 	use App\Seating;
+	use App\TicketTranslation;
 	use App\Timetable;
 	use App\Trajectory;
 
@@ -50,7 +51,7 @@
 		13 => Timetable::class,
 		14 => Bitmasking::class,
 		15 => MemoryGame::class,
-		#16 => NYI::class,
+		16 => TicketTranslation::class,
 		17 => Conway::class,
 		18 => Homework::class,
 		19 => Messages::class,

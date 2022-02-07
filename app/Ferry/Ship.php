@@ -1,7 +1,7 @@
 <?php
 	namespace App\Ferry;
 
-	use App\Utils\Position2d;
+	use AoC\Utils\Position2d;
 
 	class Ship
 	{

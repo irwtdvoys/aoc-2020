@@ -2,7 +2,7 @@
 	namespace App\Ferry;
 
 	use App\Utils\CompassDirections as Directions;
-	use App\Utils\Position2d;
+	use AoC\Utils\Position2d;
 
 	class Waypoint
 	{

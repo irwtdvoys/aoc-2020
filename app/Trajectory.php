@@ -4,7 +4,7 @@
 	use AoC\Helper;
 	use AoC\Result;
 	use App\PasswordPolicy\Password;
-	use App\Utils\Position2d;
+	use AoC\Utils\Position2d;
 
 	class Trajectory extends Helper
 	{

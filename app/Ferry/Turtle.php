@@ -1,8 +1,8 @@
 <?php
 	namespace App\Ferry;
 
+	use AoC\Utils\Position2d;
 	use App\Utils\CompassDirections as Directions;
-	use App\Utils\Position2d;
 
 	class Turtle
 	{

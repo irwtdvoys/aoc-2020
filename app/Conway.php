@@ -4,8 +4,8 @@
 	use AoC\Helper;
 	use AoC\Result;
 	use App\Conway\Tiles;
-	use App\Utils\Position4d;
-	use App\Utils\Range;
+	use AoC\Utils\Position4d;
+	use AoC\Utils\Range;
 
 	class Conway extends Helper
 	{

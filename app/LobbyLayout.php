@@ -4,8 +4,8 @@
 	use AoC\Helper;
 	use AoC\Result;
 	use App\LobbyLayout\Instruction;
-	use App\Utils\Position3d;
-	use App\Utils\Range;
+	use AoC\Utils\Position3d;
+	use AoC\Utils\Range;
 
 	class LobbyLayout extends Helper
 	{

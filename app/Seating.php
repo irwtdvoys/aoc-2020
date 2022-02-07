@@ -210,7 +210,11 @@
 			while ($changes !== 0)
 			{
 				$changes = $this->step();
-				$this->draw();
+
+				if ($this->verbose)
+				{
+					$this->draw();
+				}
 			}
 
 			$result->part1 = $this->count();
@@ -222,7 +226,11 @@
 			while ($changes !== 0)
 			{
 				$changes = $this->step(2);
-				$this->draw();
+
+				if ($this->verbose)
+				{
+					$this->draw();
+				}
 			}
 
 			$result->part2 = $this->count();

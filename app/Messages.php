@@ -34,7 +34,7 @@
 			);
 		}
 
-		public function generatePattern(int $index)
+		public function generatePattern(int $index): string
 		{
 			$rule = $this->rules[$index];
 
@@ -101,7 +101,12 @@
 
 			$this->reset();
 			$this->override = true;
-			dump("/^" . $this->generatePattern(0) . "$/m");
+
+			if ($this->verbose)
+			{
+				echo("/^" . $this->generatePattern(0) . "$/m" . PHP_EOL);
+			}
+
 			$result->part2 = preg_match_all("/^" . $this->generatePattern(0) . "$/m", $this->messages);
 
 			return $result;

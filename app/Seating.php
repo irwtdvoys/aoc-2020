@@ -26,7 +26,7 @@
 			);
 		}
 
-		public function draw()
+		public function draw(): void
 		{
 			foreach ($this->data as $row)
 			{

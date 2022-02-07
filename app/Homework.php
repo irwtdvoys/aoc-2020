@@ -86,18 +86,12 @@
 
 		private function calculate(int $a, string $operation, int $b): int
 		{
-			switch ($operation)
+			$result = match ($operation)
 			{
-				case self::ADDITION:
-					$result = $a + $b;
-					break;
-				case self::MULTIPLICATION:
-					$result = $a * $b;
-					break;
-				default:
-					$result = 0;
-					break;
-			}
+				self::ADDITION => $a + $b,
+				self::MULTIPLICATION => $a * $b,
+				default => 0,
+			};
 
 			return $result;
 		}

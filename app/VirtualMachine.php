@@ -30,7 +30,7 @@
 			$this->reset();
 		}
 
-		public function __clone()
+		public function __clone(): void
 		{
 			$this->instructions = array_map(
 				function($element)

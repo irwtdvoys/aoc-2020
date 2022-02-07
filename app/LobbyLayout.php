@@ -19,6 +19,7 @@
 		const TILE_WHITE = false;
 		const TILE_BLACK = true;
 
+		/** @var Instruction[] */
 		public array $instructions = [];
 		public Position3d $position;
 		public array $tiles = [];
@@ -69,7 +70,7 @@
 			}
 		}
 
-		public function count()
+		public function count(): int
 		{
 			return count(array_filter($this->tiles));
 		}

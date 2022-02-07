@@ -7,6 +7,7 @@
 
 	class Bitmasking extends Helper
 	{
+		/** @var Program[] */
 		public array $programs;
 		public array $memory = [];
 		public array $memory2 = [];

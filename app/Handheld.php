@@ -8,6 +8,7 @@
 	class Handheld extends Helper
 	{
 		public VirtualMachine $vm;
+		/** @var Instruction[] */
 		public array $instructions = [];
 
 		public function __construct(int $day, bool $verbose = false, string $override = null)

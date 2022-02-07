@@ -35,7 +35,7 @@
 
 		public function getState(Position4d $position): string
 		{
-			return isset($this->data[(string)$position]) ? $this->data[(string)$position] : Tiles::INACTIVE;
+			return $this->data[(string)$position] ?? Tiles::INACTIVE;
 		}
 
 		public function countNeighbors(Position4d $position): int

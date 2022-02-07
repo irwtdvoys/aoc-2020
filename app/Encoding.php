@@ -7,6 +7,7 @@
 
 	class Encoding extends Helper
 	{
+		/** @var int[] */
 		public array $data = [];
 		public int $preamble = 25;
 

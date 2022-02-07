@@ -17,7 +17,7 @@
 			$this->data = explode(PHP_EOL, parent::load($override));
 		}
 
-		private function process($data)
+		private function process($data): int
 		{
 			$binary = str_replace(["F", "B", "L", "R"], [0, 1, 0, 1], $data);
 

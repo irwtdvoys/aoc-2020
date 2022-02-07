@@ -6,6 +6,7 @@
 
 	class Report extends Helper
 	{
+		/** @var int[] */
 		public array $data;
 
 		public function __construct(int $day, bool $verbose = false, string $override = null)
